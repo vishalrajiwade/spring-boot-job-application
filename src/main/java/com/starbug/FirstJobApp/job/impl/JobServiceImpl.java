@@ -42,6 +42,7 @@ public class JobServiceImpl implements JobService {
                 job.setTitle(updatedJob.getTitle());
                 job.setMaxSalary(updatedJob.getMaxSalary());
                 job.setMinSalary(updatedJob.getMinSalary());
+                jobRepository.save(job);
                 return true;
             }
         return false;
